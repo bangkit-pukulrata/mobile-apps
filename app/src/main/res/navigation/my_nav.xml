@@ -23,9 +23,10 @@
         tools:layout="@layout/fragment_hoax" >
         <action
             android:id="@+id/action_hoaxFragment_to_hoaxResultFragment"
+            app:destination="@id/hoaxResultFragment"
+            app:enterAnim="@android:anim/fade_in"
             app:popUpTo="@id/hoaxFragment"
-            app:popUpToInclusive="true"
-            app:destination="@id/hoaxResultFragment" />
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
@@ -36,7 +37,11 @@
         android:id="@+id/hoaxResultFragment"
         android:name="com.dicoding.pukulenamcapstone.HoaxResultFragment"
         android:label="fragment_hoax_result"
-        tools:layout="@layout/fragment_hoax_result" />
+        tools:layout="@layout/fragment_hoax_result">
+        <argument
+            android:name="predictedLabel"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/newsDetailFragment"
         android:name="com.dicoding.pukulenamcapstone.NewsDetailFragment"
