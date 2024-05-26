@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item  android:iconTint="#572E2B"  android:id="@+id/homeFragment" android:title="Home" android:icon="@drawable/vector_bottom_home" />
+    <item android:id="@+id/hoaxFragment" android:title="Cek Hoax" android:icon="@drawable/vector_bottom_hoax" />
+    <item android:id="@+id/settingsFragment" android:title="Settings" android:icon="@drawable/vector_bottom_settings" />
+</menu>

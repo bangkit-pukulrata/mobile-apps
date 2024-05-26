@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">PukuEnamCapstone</string>
+    <string name="informatif">Informatif di pagi hari hanya butuh 5 menit!</string>
+    <string name="nikmati">nikmati berita terhangat yang up-to-date setiap paginya melalui inbox email-mu</string>
+    <string name="Mulai">Mulai Sekarang</string>
+    <string name="Belum">Belum punya akun?</string>
+    <string name="Daftar">Daftar</string>
+    <string name="Selamat_Datang">Selamat Datang!</string>
+    <string name="Silahkan_Masuk">Silahkan masuk untuk dengan data yang terdaftar.</string>
+    <string name="Email">Email</string>
+    <string name="Sandi">Kata Sandi</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
