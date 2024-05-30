@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AllNewsFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu"
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@drawable/logo"
+        android:background="@color/white"
+        android:elevation="20dp"
+        tools:ignore="MissingConstraints">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="100dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView40"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:text="Berita Hari Ini"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView41"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/gilroy_regular"
+                    android:text="Temukan berita hari ini"
+                    android:textColor="#B0B0B0"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView40" />
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontal_sv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:scrollbars="none"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView41">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp">
+
+                        <Button
+                            android:id="@+id/button6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/primary_orange"
+                            android:fontFamily="@font/gilroy_bold"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Ekonomi"
+                            android:textSize="16sp"
+                            app:cornerRadius="8dp" />
+
+                        <Button
+                            android:id="@+id/button7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/white"
+                            android:fontFamily="@font/gilroy_bold"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Finansial"
+                            android:textColor="@color/primary_orange"
+                            android:textSize="16sp"
+                            app:cornerRadius="8dp" />
+
+                        <Button
+                            android:id="@+id/button8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/white"
+                            android:fontFamily="@font/gilroy_bold"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Hiburan"
+                            android:textColor="@color/primary_orange"
+                            android:textSize="16sp"
+                            app:cornerRadius="8dp" />
+
+                        <Button
+                            android:id="@+id/button9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/white"
+                            android:fontFamily="@font/gilroy_bold"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Internasional"
+                            android:textColor="@color/primary_orange"
+                            android:textSize="16sp"
+                            app:cornerRadius="8dp" />
+
+                        <Button
+                            android:id="@+id/button10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/white"
+                            android:fontFamily="@font/gilroy_bold"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Nasional"
+                            android:textColor="@color/primary_orange"
+                            android:textSize="16sp"
+                            app:cornerRadius="8dp" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <include
+                    android:id="@+id/included_item_news"
+                    layout="@layout/item_news"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/horizontal_sv" />
+
+                <include
+                    android:id="@+id/included_item_news2"
+                    layout="@layout/item_news"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/included_item_news" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
