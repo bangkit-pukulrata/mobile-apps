@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,10 +15,7 @@
         android:theme="@style/Theme.PukuEnamCapstone"
         tools:targetApi="31">
         <activity
-            android:name=".HoaxResult"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity2"
+            android:name=".ui.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,16 +24,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".HomeDetailActivity"
-            android:exported="false" />
+            android:name=".ui.auth.WelcomeActivity"
+            android:exported="true">
+        </activity>
         <activity
-            android:name=".HomeActivity"
+            android:name=".ui.MainActivity"
             android:exported="false"></activity>
         <activity
-            android:name=".AuthenticationActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".ui.auth.AuthenticationActivity"
             android:exported="false" />
     </application>
 

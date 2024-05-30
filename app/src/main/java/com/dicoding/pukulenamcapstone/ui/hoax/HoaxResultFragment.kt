@@ -1,4 +1,4 @@
-package com.dicoding.pukulenamcapstone
+package com.dicoding.pukulenamcapstone.ui.hoax
 
 import android.graphics.Color
 import android.os.Bundle
@@ -9,10 +9,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import ir.mahozad.android.PieChart
-import ir.mahozad.android.component.Alignment
 import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
 import android.graphics.Typeface
+import com.dicoding.pukulenamcapstone.R
 
 class HoaxResultFragment : Fragment() {
 
