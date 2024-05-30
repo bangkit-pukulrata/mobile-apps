@@ -64,5 +64,11 @@ dependencies {
 
     implementation("org.tensorflow:tensorflow-lite:2.5.0")
     implementation("org.tensorflow:tensorflow-lite-select-tf-ops:2.5.0")
+    implementation("com.github.IslamKhSh:CardSlider:1.0.1")
+
+    implementation("com.squareup.picasso:picasso:2.71828")
+    implementation("com.github.bumptech.glide:glide:4.12.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")
+
 }
 

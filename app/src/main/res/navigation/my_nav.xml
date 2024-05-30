@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.dicoding.pukulenamcapstone.HomeFragment"
+        android:name="com.dicoding.pukulenamcapstone.ui.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -21,10 +21,13 @@
             app:popUpTo="@id/homeFragment"
             app:popUpToInclusive="true"
             />
+        <action
+            android:id="@+id/action_homeFragment_to_carouselFragment"
+            app:destination="@id/carouselFragment" />
     </fragment>
     <fragment
         android:id="@+id/hoaxFragment"
-        android:name="com.dicoding.pukulenamcapstone.HoaxFragment"
+        android:name="com.dicoding.pukulenamcapstone.ui.hoax.HoaxFragment"
         android:label="fragment_hoax"
         tools:layout="@layout/fragment_hoax" >
         <action
@@ -36,12 +39,12 @@
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.dicoding.pukulenamcapstone.SettingsFragment"
+        android:name="com.dicoding.pukulenamcapstone.ui.setting.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/hoaxResultFragment"
-        android:name="com.dicoding.pukulenamcapstone.HoaxResultFragment"
+        android:name="com.dicoding.pukulenamcapstone.ui.hoax.HoaxResultFragment"
         android:label="fragment_hoax_result"
         tools:layout="@layout/fragment_hoax_result">
         <argument
@@ -50,16 +53,25 @@
     </fragment>
     <fragment
         android:id="@+id/newsDetailFragment"
-        android:name="com.dicoding.pukulenamcapstone.NewsDetailFragment"
+        android:name="com.dicoding.pukulenamcapstone.ui.home.NewsDetailFragment"
         android:label="fragment_news_detail"
-        tools:layout="@layout/fragment_news_detail" />
+        tools:layout="@layout/fragment_news_detail" >
+        <action
+            android:id="@+id/action_newsDetailFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/allNewsFragment"
-        android:name="com.dicoding.pukulenamcapstone.AllNewsFragment"
+        android:name="com.dicoding.pukulenamcapstone.ui.home.AllNewsFragment"
         android:label="fragment_all_news"
         tools:layout="@layout/fragment_all_news" >
         <action
             android:id="@+id/action_allNewsFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/carouselFragment"
+        android:name="com.dicoding.pukulenamcapstone.ui.CarouselFragment"
+        android:label="fragment_carousel"
+        tools:layout="@layout/fragment_carousel" />
 </navigation>

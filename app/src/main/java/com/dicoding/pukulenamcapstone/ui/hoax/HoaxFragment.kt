@@ -1,6 +1,5 @@
-package com.dicoding.pukulenamcapstone
+package com.dicoding.pukulenamcapstone.ui.hoax
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -11,6 +10,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.navigation.Navigation
+import com.dicoding.pukulenamcapstone.R
 import org.json.JSONObject
 import org.tensorflow.lite.Interpreter
 import org.tensorflow.lite.flex.FlexDelegate

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AuthenticationActivity">
+    tools:context=".ui.auth.AuthenticationActivity">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -22,10 +22,11 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/gilroy_medium"
         android:text="@string/Selamat_Datang"
         android:textColor="@color/black"
-        android:textStyle="bold"
         android:textSize="24dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,6 +37,7 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/gilroy_medium"
         android:text="@string/Silahkan_Masuk"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -47,7 +49,7 @@
 
     <EditText
         android:id="@+id/input_email"
-        android:layout_width="300dp"
+        android:layout_width="380dp"
         android:layout_height="60dp"
         android:background="@drawable/edittext_background"
         android:hint="Masukan Email anda"
@@ -63,6 +65,8 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/gilroy_medium"
         android:text="@string/Belum"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -76,6 +80,8 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/gilroy_medium"
         android:text="@string/Daftar"
         android:textColor="#3C8FE5"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -90,6 +96,7 @@
         android:layout_width="291dp"
         android:layout_height="51dp"
         android:background="@drawable/button_background"
+        android:fontFamily="@font/gilroy_medium"
         android:text="Masuk"
         android:textColor="@android:color/white"
         android:textSize="16sp"
@@ -103,7 +110,7 @@
 
     <EditText
         android:id="@+id/input_password"
-        android:layout_width="300dp"
+        android:layout_width="380dp"
         android:layout_height="60dp"
         android:background="@drawable/edittext_background"
         android:hint="Masukan kata sandi anda"
@@ -113,7 +120,7 @@
         app:layout_constraintEnd_toEndOf="@+id/textView7"
         app:layout_constraintStart_toStartOf="@+id/textView7"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.51" />
+        app:layout_constraintVertical_bias="0.499" />
 
     <TextView
         android:id="@+id/forgot_password"
@@ -121,6 +128,7 @@
         android:layout_height="56dp"
         android:layout_marginStart="200dp"
         android:clickable="true"
+        android:fontFamily="@font/gilroy_medium"
         android:gravity="center"
         android:text="Forgot password?"
         android:textColor="@android:color/holo_blue_light"
@@ -128,16 +136,17 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/input_password"
-        app:layout_constraintHorizontal_bias="0.757"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/input_password"
         app:layout_constraintTop_toBottomOf="@+id/input_password"
-        app:layout_constraintVertical_bias="0.049" />
+        app:layout_constraintVertical_bias="0.057" />
 
     <CheckBox
         android:id="@+id/checkbox_remember_me"
         android:layout_width="150dp"
         android:layout_height="56dp"
         android:layout_marginTop="12dp"
+        android:fontFamily="@font/gilroy_medium"
         android:text="Ingat saya"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -152,6 +161,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:fontFamily="@font/gilroy_medium"
         android:text="@string/Email"
         android:textColor="@color/black"
         android:textStyle="bold"
@@ -165,6 +175,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:fontFamily="@font/gilroy_medium"
         android:text="@string/Sandi"
         android:textColor="@color/black"
         android:textStyle="bold"
@@ -172,6 +183,63 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_email"
         app:layout_constraintVertical_bias="0.654" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_masuk">
+
+        <!-- Garis horizontal dan teks "atau" -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#E0E0E0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="atau"
+                android:textColor="#B0B0B0"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#E0E0E0" />
+        </LinearLayout>
+
+        <!-- Button "Lanjutkan dengan Google" -->
+        <Button
+            android:id="@+id/button_google"
+            android:layout_width="291dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/google_button_background"
+            android:drawableStart="@drawable/ic_google"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:text="Lanjutkan dengan Google"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

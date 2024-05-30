@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="P6">#F85F86</color>
     <color name="primary_orange">#F85F56</color>
+    <color name="colorPrimaryDark">#FFFFFFFF</color>
 </resources>
