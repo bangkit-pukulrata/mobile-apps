@@ -28,13 +28,17 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingBottom="200dp">
+            android:paddingBottom="100dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -45,12 +49,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="100dp"
+                    android:layout_marginTop="8dp"
+                    android:elevation="20dp"
                     android:fontFamily="@font/gilroy_bold"
                     android:text="Berita Terpanas"
                     android:textColor="#2A2A2A"
                     android:textSize="20sp"
-                    android:elevation="20dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -59,7 +63,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="6dp"
                     android:fontFamily="@font/gilroy_regular"
                     android:text="Temukan berita terpanas"
                     android:textColor="#B0B0B0"
@@ -100,7 +103,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="6dp"
                     android:fontFamily="@font/gilroy_regular"
                     android:text="Temukan berita hari ini"
                     android:textColor="#B0B0B0"
@@ -128,9 +130,39 @@
                     android:text="Lihat Semua"
                     android:textColor="@color/primary_orange"
                     android:textSize="16sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView15"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/textView14" />
+
+                <include
+                    android:id="@+id/included_item_news"
+                    layout="@layout/item_news"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textView15" />
+
+                <include
+                    android:id="@+id/included_item_news2"
+                    layout="@layout/item_news"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/included_item_news" />
+
+                <include
+                    android:id="@+id/included_item_news3"
+                    layout="@layout/item_news"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/included_item_news2" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
