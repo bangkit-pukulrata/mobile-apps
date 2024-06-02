@@ -25,7 +25,7 @@
         android:fontFamily="@font/gilroy_medium"
         android:text="@string/Selamat_Datang"
         android:textColor="@color/black"
-        android:textSize="24dp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,8 +47,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.219" />
 
-    <EditText
-        android:id="@+id/input_email"
+    <com.dicoding.pukulenamcapstone.ui.customview.EditTextEmail
+        android:id="@+id/login_email"
         android:layout_width="380dp"
         android:layout_height="60dp"
         android:background="@drawable/edittext_background"
@@ -70,29 +70,29 @@
         android:text="@string/Belum"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button_masuk"
+        app:layout_constraintEnd_toEndOf="@+id/button_login"
         app:layout_constraintHorizontal_bias="0.388"
-        app:layout_constraintStart_toStartOf="@+id/button_masuk"
-        app:layout_constraintTop_toBottomOf="@+id/button_masuk"
+        app:layout_constraintStart_toStartOf="@+id/button_login"
+        app:layout_constraintTop_toBottomOf="@+id/button_login"
         app:layout_constraintVertical_bias="0.123" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="-20dp"
         android:fontFamily="@font/gilroy_medium"
         android:text="@string/Daftar"
         android:textColor="#3C8FE5"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button_masuk"
+        app:layout_constraintEnd_toEndOf="@+id/button_login"
         app:layout_constraintHorizontal_bias="0.734"
-        app:layout_constraintStart_toStartOf="@+id/button_masuk"
-        app:layout_constraintTop_toBottomOf="@+id/button_masuk"
+        app:layout_constraintStart_toStartOf="@+id/button_login"
+        app:layout_constraintTop_toBottomOf="@+id/button_login"
         app:layout_constraintVertical_bias="0.123" />
 
     <Button
-        android:id="@+id/button_masuk"
+        android:id="@+id/button_login"
         android:layout_width="291dp"
         android:layout_height="51dp"
         android:background="@drawable/button_background"
@@ -102,14 +102,14 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/input_password"
+        app:layout_constraintEnd_toEndOf="@+id/login_password"
         app:layout_constraintHorizontal_bias="0.454"
-        app:layout_constraintStart_toStartOf="@+id/input_password"
-        app:layout_constraintTop_toBottomOf="@+id/input_password"
+        app:layout_constraintStart_toStartOf="@+id/login_password"
+        app:layout_constraintTop_toBottomOf="@+id/login_password"
         app:layout_constraintVertical_bias="0.31" />
 
-    <EditText
-        android:id="@+id/input_password"
+    <com.dicoding.pukulenamcapstone.ui.customview.EditTextPassword
+        android:id="@+id/login_password"
         android:layout_width="380dp"
         android:layout_height="60dp"
         android:background="@drawable/edittext_background"
@@ -135,10 +135,10 @@
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/input_password"
+        app:layout_constraintEnd_toEndOf="@+id/login_password"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/input_password"
-        app:layout_constraintTop_toBottomOf="@+id/input_password"
+        app:layout_constraintStart_toStartOf="@+id/login_password"
+        app:layout_constraintTop_toBottomOf="@+id/login_password"
         app:layout_constraintVertical_bias="0.057" />
 
     <CheckBox
@@ -150,10 +150,10 @@
         android:text="Ingat saya"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/input_password"
+        app:layout_constraintEnd_toEndOf="@+id/login_password"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/input_password"
-        app:layout_constraintTop_toBottomOf="@+id/input_password"
+        app:layout_constraintStart_toStartOf="@+id/login_password"
+        app:layout_constraintTop_toBottomOf="@+id/login_password"
         app:layout_constraintVertical_bias="0.013" />
 
     <TextView
@@ -165,7 +165,7 @@
         android:text="@string/Email"
         android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/input_email"
+        app:layout_constraintBottom_toTopOf="@+id/login_email"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7"
         app:layout_constraintVertical_bias="0.634" />
@@ -179,9 +179,9 @@
         android:text="@string/Sandi"
         android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/input_password"
+        app:layout_constraintBottom_toTopOf="@+id/login_password"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/input_email"
+        app:layout_constraintTop_toBottomOf="@+id/login_email"
         app:layout_constraintVertical_bias="0.654" />
 
     <LinearLayout
@@ -193,9 +193,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_masuk">
+        app:layout_constraintTop_toBottomOf="@+id/button_login">
 
-        <!-- Garis horizontal dan teks "atau" -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="31dp"
@@ -225,7 +224,6 @@
                 android:background="#E0E0E0" />
         </LinearLayout>
 
-        <!-- Button "Lanjutkan dengan Google" -->
         <Button
             android:id="@+id/button_google"
             android:layout_width="291dp"
