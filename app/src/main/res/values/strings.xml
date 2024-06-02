@@ -9,6 +9,10 @@
     <string name="Silahkan_Masuk">Silahkan masuk untuk dengan data yang terdaftar.</string>
     <string name="Email">Email</string>
     <string name="Sandi">Kata Sandi</string>
+    <string name="Username">Username</string>
+    <string name="email_error">".com"</string>
+    <string name="password_error">Password must be more than 8 characters</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
