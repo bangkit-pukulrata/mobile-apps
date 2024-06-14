@@ -22,7 +22,7 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="74dp"
         android:background="#F85F56"
         app:circularflow_defaultRadius="50dp"
         app:itemActiveIndicatorStyle="@color/black"
@@ -30,6 +30,7 @@
         app:itemTextAppearanceActiveBoldEnabled="true"
         app:itemTextAppearanceInactive="@color/primary_orange"
         app:itemTextColor="@drawable/icon_tint_selector"
+        app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

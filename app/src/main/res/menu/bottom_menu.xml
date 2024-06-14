@@ -2,5 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item  android:iconTint="#572E2B"  android:id="@+id/homeFragment" android:title="Home" android:icon="@drawable/vector_bottom_home" />
     <item android:id="@+id/hoaxFragment" android:title="Cek Hoax" android:icon="@drawable/vector_bottom_hoax" />
-    <item android:id="@+id/settingsFragment" android:title="Settings" android:icon="@drawable/vector_bottom_settings" />
+    <item android:id="@+id/biasFragment" android:title="Cek Bias" android:icon="@drawable/vector_bottom_bias" />
+    <item android:id="@+id/settingsFragment" android:title="Account" android:icon="@drawable/vector_bottom_settings" />
 </menu>

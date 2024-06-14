@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".ui.home.NewsDetailFragment">
 
     <LinearLayout
@@ -25,6 +25,7 @@
                 android:layout_width="419dp"
                 android:layout_height="519dp"
                 android:src="@drawable/news_detail_with_overlay"
+                android:tint="#6F000000"
                 android:translationZ="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +35,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="304dp"
+                android:layout_marginTop="382dp"
                 android:paddingBottom="20dp"
                 android:translationZ="30dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -70,17 +71,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/button3" />
 
-                <TextView
-                    android:id="@+id/textView29"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="25dp"
-                    android:text="2 Min Read"
-                    android:textColor="@color/white"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView27" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -108,14 +98,14 @@
 
                 <ImageView
                     android:id="@+id/imageView13"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="16dp"
-                    android:src="@drawable/penulis"
+                    android:src="@drawable/logo_circle"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView30"
-                    tools:src="@drawable/penulis" />
+                    tools:src="@drawable/avatar_admin" />
 
                 <TextView
                     android:id="@+id/textView31"
@@ -123,51 +113,74 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:fontFamily="@font/gilroy_semibold"
-                    android:text="Abdullah Nur Huda"
+                    android:text="Admin"
                     android:textSize="16sp"
                     app:layout_constraintStart_toEndOf="@+id/imageView13"
                     app:layout_constraintTop_toTopOf="@+id/imageView13" />
 
-                <Button
-                    android:id="@+id/button4"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:backgroundTint="@color/primary_orange"
-                    android:fontFamily="@font/gilroy_semibold"
-                    android:text="Semua Artikel"
-                    android:textSize="14sp"
-                    app:cornerRadius="10dp"
-                    app:layout_constraintStart_toEndOf="@+id/imageView13"
-                    app:layout_constraintTop_toBottomOf="@+id/textView31" />
+                    android:background="@drawable/chip_bg_orange"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView13"
+                    app:layout_constraintStart_toEndOf="@+id/imageView13">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PukulEnamID"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
-                android:id="@+id/textView32"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/gilroy_bold"
-                android:text="M.K.S.A (Mager Kepanjangan, Singkat Aja)"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout9" />
-
-            <TextView
-                android:id="@+id/textView39"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="24dp"
-                android:gravity="fill_horizontal"
-                android:text="Intinya… Serangan udara Israel ke Rafah, Jalur Gaza. Amerika Serikat akhirnya menghentikan pengiriman bom ke Israel. Indonesia mengecam tindakan militer dan menuntut gencatan senjata permanen. Dampaknya kerusakan infrastruktur, korban jiwa, dan ketegangan di Timur Tengah.   Serangan udara yang dilancarkan oleh Israel ke kota Rafah, Jalur Gaza, telah memicu kecaman dari berbagai pihak internasional. Kementerian Luar Negeri Indonesia termasuk yang pertama kali mengecam tindakan militer tersebut, menuntut Perserikatan Bangsa-Bangsa untuk mengambil tindakan tegas guna menghentikan kekerasan yang berpotensi meluas.   Menurut laporan terbaru, serangan yang dimulai sejak Senin (6/5/2024) ini telah menyebabkan kerusakan signifikan pada infrastruktur sipil dan menimbulkan korban jiwa. Tank-tank Israel terlihat mendekati perbatasan Rafah, hanya berjarak 200 meter dari Mesir, menandakan kemungkinan eskalasi lebih lanjut."
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView32" />
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout9">
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:maxWidth="340dp"
+                    android:text="M.K.S.A (Mager Kepanjangan, Singkat Aja)"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@+id/textView39"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:gravity="fill_horizontal"
+                    android:text="Intinya… Serangan udara Israel ke Rafah, Jalur Gaza. Amerika Serikat akhirnya menghentikan pengiriman bom ke Israel. Indonesia mengecam tindakan militer dan menuntut gencatan senjata permanen. Dampaknya kerusakan infrastruktur, korban jiwa, dan ketegangan di Timur Tengah.   Serangan udara yang dilancarkan oleh Israel ke kota Rafah, Jalur Gaza, telah memicu kecaman dari berbagai pihak internasional. Kementerian Luar Negeri Indonesia termasuk yang pertama kali mengecam tindakan militer tersebut, menuntut Perserikatan Bangsa-Bangsa untuk mengambil tindakan tegas guna menghentikan kekerasan yang berpotensi meluas.   Menurut laporan terbaru, serangan yang dimulai sejak Senin (6/5/2024) ini telah menyebabkan kerusakan signifikan pada infrastruktur sipil dan menimbulkan korban jiwa. Tank-tank Israel terlihat mendekati perbatasan Rafah, hanya berjarak 200 meter dari Mesir, menandakan kemungkinan eskalasi lebih lanjut."
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

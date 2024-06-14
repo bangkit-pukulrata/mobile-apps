@@ -6,6 +6,7 @@ import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.pukulenamcapstone.R
 import com.dicoding.pukulenamcapstone.ui.auth.WelcomeActivity
+import com.google.firebase.FirebaseApp
 
 
 class SplashActivity : AppCompatActivity() {
@@ -17,6 +18,7 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+        FirebaseApp.initializeApp(this)
 
         Handler().postDelayed({
             startActivity(Intent(this, WelcomeActivity::class.java))

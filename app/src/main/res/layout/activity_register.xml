@@ -79,7 +79,7 @@
         android:id="@+id/button_register"
         android:layout_width="291dp"
         android:layout_height="51dp"
-        android:background="@drawable/button_background"
+        android:backgroundTint="@color/primary_orange"
         android:fontFamily="@font/gilroy_medium"
         android:text="Daftar"
         android:textColor="@android:color/white"

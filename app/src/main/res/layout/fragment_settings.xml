@@ -8,6 +8,218 @@
     android:background="@color/white"
     tools:context=".ui.home.HomeFragment">
 
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/constraintLayout5"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.333"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/icon_my_accout"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginStart="24dp"-->
+<!--            android:src="@drawable/setting_user_icon"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            tools:src="@tools:sample/avatars" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_my_account"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:fontFamily="@font/gilroy_regular"-->
+<!--            android:text="Akun Saya"-->
+<!--            android:textSize="16sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/icon_my_accout"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/icon_my_accout"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/icon_my_accout" />-->
+
+<!--        <View-->
+<!--            android:id="@+id/divider_1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="1dp"-->
+<!--            android:layout_marginStart="24dp"-->
+<!--            android:layout_marginTop="24dp"-->
+<!--            android:layout_marginEnd="24dp"-->
+<!--            android:background="?android:attr/listDivider"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/icon_my_accout" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView11"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="24dp"-->
+<!--            android:src="@drawable/chevron_right"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/tv_my_account"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/tv_my_account"-->
+<!--            tools:src="@tools:sample/avatars" />-->
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/constraintLayout6"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="24dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/iv_icon_notif"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginStart="24dp"-->
+<!--            android:src="@drawable/setting_notif_icon"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            tools:src="@tools:sample/avatars" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_notif"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:fontFamily="@font/gilroy_regular"-->
+<!--            android:text="Notifikasi"-->
+<!--            android:textSize="16sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/iv_icon_notif"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/iv_icon_notif"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/iv_icon_notif" />-->
+
+<!--        <View-->
+<!--            android:id="@+id/divider"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="1dp"-->
+<!--            android:layout_marginStart="24dp"-->
+<!--            android:layout_marginTop="24dp"-->
+<!--            android:layout_marginEnd="24dp"-->
+<!--            android:background="?android:attr/listDivider"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/iv_icon_notif" />-->
+
+<!--        <com.hzn.lib.EasyToggle-->
+<!--            android:id="@+id/et"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="24dp"-->
+<!--            app:etBgOnColor="@color/primary_orange"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/tv_notif"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/tv_notif" />-->
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/constraintLayout7"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="24dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/constraintLayout6">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/iv_icon_anon"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginStart="24dp"-->
+<!--            android:src="@drawable/setting_anon_icon"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            tools:src="@tools:sample/avatars" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_anon"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:fontFamily="@font/gilroy_regular"-->
+<!--            android:text="Anonymous"-->
+<!--            android:textSize="16sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/iv_icon_anon"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/iv_icon_anon"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/iv_icon_anon" />-->
+
+<!--        <View-->
+<!--            android:id="@+id/divider_3"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="1dp"-->
+<!--            android:layout_marginStart="24dp"-->
+<!--            android:layout_marginTop="24dp"-->
+<!--            android:layout_marginEnd="24dp"-->
+<!--            android:background="?android:attr/listDivider"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/iv_icon_anon" />-->
+
+<!--        <com.hzn.lib.EasyToggle-->
+<!--            android:id="@+id/et_anon"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="24dp"-->
+<!--            app:etBgOnColor="@color/primary_orange"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/tv_anon"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/tv_anon" />-->
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#F6DADB"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/icon_logout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/gilroy_bold"
+                android:text="Keluar"
+                android:textColor="#C40A0C"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView12"
+                app:layout_constraintStart_toEndOf="@+id/imageView12"
+                app:layout_constraintTop_toTopOf="@+id/imageView12" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout4"
         android:layout_width="match_parent"
@@ -15,6 +227,7 @@
         android:background="@drawable/setting_bg_hd"
         android:paddingBottom="40dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -54,228 +267,6 @@
             android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/imageView6"
             app:layout_constraintTop_toBottomOf="@+id/textView17" />
-
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="24dp"
-            android:src="@drawable/edit_profile"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView6"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageView6"
-            tools:src="@tools:sample/avatars" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout5"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
-
-        <ImageView
-            android:id="@+id/icon_my_accout"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="24dp"
-            android:src="@drawable/setting_user_icon"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:src="@tools:sample/avatars" />
-
-        <TextView
-            android:id="@+id/tv_my_account"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:fontFamily="@font/gilroy_regular"
-            android:text="Akun Saya"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/icon_my_accout"
-            app:layout_constraintStart_toEndOf="@+id/icon_my_accout"
-            app:layout_constraintTop_toTopOf="@+id/icon_my_accout" />
-
-        <View
-            android:id="@+id/divider_1"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
-            android:background="?android:attr/listDivider"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/icon_my_accout" />
-
-        <ImageView
-            android:id="@+id/imageView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
-            android:src="@drawable/chevron_right"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_my_account"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tv_my_account"
-            tools:src="@tools:sample/avatars" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout6"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
-
-        <ImageView
-            android:id="@+id/iv_icon_notif"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="24dp"
-            android:src="@drawable/setting_notif_icon"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:src="@tools:sample/avatars" />
-
-        <TextView
-            android:id="@+id/tv_notif"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:fontFamily="@font/gilroy_regular"
-            android:text="Notifikasi"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_icon_notif"
-            app:layout_constraintStart_toEndOf="@+id/iv_icon_notif"
-            app:layout_constraintTop_toTopOf="@+id/iv_icon_notif" />
-
-        <View
-            android:id="@+id/divider"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
-            android:background="?android:attr/listDivider"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_icon_notif" />
-
-        <com.hzn.lib.EasyToggle
-            android:id="@+id/et"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
-            app:etBgOnColor="@color/primary_orange"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_notif"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tv_notif" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout7"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout6">
-
-        <ImageView
-            android:id="@+id/iv_icon_anon"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="24dp"
-            android:src="@drawable/setting_anon_icon"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:src="@tools:sample/avatars" />
-
-        <TextView
-            android:id="@+id/tv_anon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:fontFamily="@font/gilroy_regular"
-            android:text="Anonymous"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_icon_anon"
-            app:layout_constraintStart_toEndOf="@+id/iv_icon_anon"
-            app:layout_constraintTop_toTopOf="@+id/iv_icon_anon" />
-
-        <View
-            android:id="@+id/divider_3"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
-            android:background="?android:attr/listDivider"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_icon_anon" />
-
-        <com.hzn.lib.EasyToggle
-            android:id="@+id/et_anon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
-            app:etBgOnColor="@color/primary_orange"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_anon"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tv_anon" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout8"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:background="#F6DADB"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout7">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:id="@+id/imageView12"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/icon_logout"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:src="@tools:sample/avatars" />
-
-            <TextView
-                android:id="@+id/textView28"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:fontFamily="@font/gilroy_bold"
-                android:text="Keluar"
-                android:textColor="#C40A0C"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView12"
-                app:layout_constraintStart_toEndOf="@+id/imageView12"
-                app:layout_constraintTop_toTopOf="@+id/imageView12" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
