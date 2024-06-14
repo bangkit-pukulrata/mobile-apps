@@ -53,7 +53,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/gilroy_bold"
-                    android:text="Berita Hari Ini"
+                    android:text="Semua Berita"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -65,7 +65,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="4dp"
                     android:fontFamily="@font/gilroy_regular"
-                    android:text="Temukan berita hari ini"
+                    android:text="Temukan berita dari seluruh dunia"
                     android:textColor="#B0B0B0"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -81,147 +81,120 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView41">
 
-                    <LinearLayout
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chipGroup"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:paddingLeft="16dp">
+                        android:layout_margin="8dp"
+                        android:paddingRight="40dp"
+                        app:chipSpacingHorizontal="8dp"
+                        android:textColor="@color/chip_text_selector"
+                        app:singleSelection="true">
 
-                        <Button
-                            android:id="@+id/button6"
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_ekonomi"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:backgroundTint="@color/primary_orange"
-                            android:fontFamily="@font/gilroy_bold"
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            android:text="Ekonomi"
-                            android:textSize="16sp"
-                            app:cornerRadius="8dp" />
+                            android:text="Terbaru"
+                            android:textColor="@color/chip_text_selector"
+                            android:textColorLink="#FFFFFF"
+                            app:chipBackgroundColor="@color/bg_chip_state_list"
+                            app:chipCornerRadius="8dp"
+                            app:chipStrokeColor="@color/colorPrimaryDark"
+                            app:chipStrokeWidth="1dp" />
 
-                        <Button
-                            android:id="@+id/button7"
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_finansial"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:layout_weight="1"
-                            android:backgroundTint="@color/white"
-                            android:fontFamily="@font/gilroy_bold"
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            android:text="Finansial"
-                            android:textColor="@color/primary_orange"
-                            android:textSize="16sp"
-                            app:cornerRadius="8dp" />
-
-                        <Button
-                            android:id="@+id/button8"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:layout_weight="1"
-                            android:backgroundTint="@color/white"
-                            android:fontFamily="@font/gilroy_bold"
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            android:text="Hiburan"
-                            android:textColor="@color/primary_orange"
-                            android:textSize="16sp"
-                            app:cornerRadius="8dp" />
-
-                        <Button
-                            android:id="@+id/button9"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:layout_weight="1"
-                            android:backgroundTint="@color/white"
-                            android:fontFamily="@font/gilroy_bold"
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            android:text="Internasional"
-                            android:textColor="@color/primary_orange"
-                            android:textSize="16sp"
-                            app:cornerRadius="8dp" />
-
-                        <Button
-                            android:id="@+id/button10"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:layout_weight="1"
-                            android:backgroundTint="@color/white"
-                            android:fontFamily="@font/gilroy_bold"
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
                             android:text="Nasional"
-                            android:textColor="@color/primary_orange"
-                            android:textSize="16sp"
-                            app:cornerRadius="8dp" />
+                            app:chipBackgroundColor="@color/bg_chip_state_list"
+                            app:chipCornerRadius="8dp"
+                            app:chipStrokeColor="@color/colorPrimaryDark"
+                            app:chipStrokeWidth="1dp"
+                            android:textColor="@color/chip_text_selector"
+                            />
 
-                    </LinearLayout>
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_hiburan"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Internasional"
+                            app:chipBackgroundColor="@color/bg_chip_state_list"
+                            app:chipCornerRadius="8dp"
+                            app:chipStrokeColor="@color/colorPrimaryDark"
+                            app:chipStrokeWidth="1dp"
+                            android:textColor="@color/chip_text_selector"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_internasional"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ekonomi"
+                            app:chipBackgroundColor="@color/bg_chip_state_list"
+                            app:chipCornerRadius="8dp"
+                            app:chipStrokeColor="@color/colorPrimaryDark"
+                            app:chipStrokeWidth="1dp"
+                            android:textColor="@color/chip_text_selector"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_next"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Olahraga"
+                            app:chipBackgroundColor="@color/bg_chip_state_list"
+                            app:chipCornerRadius="8dp"
+                            app:chipStrokeColor="@color/colorPrimaryDark"
+                            app:chipStrokeWidth="1dp"
+                            android:textColor="@color/chip_text_selector"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_teknologi"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Teknologi"
+                            app:chipBackgroundColor="@color/bg_chip_state_list"
+                            app:chipCornerRadius="8dp"
+                            app:chipStrokeColor="@color/colorPrimaryDark"
+                            app:chipStrokeWidth="1dp"
+                            android:textColor="@color/chip_text_selector"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_hiburan2"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hiburan"
+                            app:chipBackgroundColor="@color/bg_chip_state_list"
+                            app:chipCornerRadius="8dp"
+                            app:chipStrokeColor="@color/colorPrimaryDark"
+                            app:chipStrokeWidth="1dp"
+                            android:textColor="@color/chip_text_selector"
+                            />
+                    </com.google.android.material.chip.ChipGroup>
                 </HorizontalScrollView>
 
-                <include
-                    android:id="@+id/included_item_news"
-                    layout="@layout/item_news"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="24dp"
                     android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/horizontal_sv" />
-
-                <include
-                    android:id="@+id/included_item_news2"
-                    layout="@layout/item_news"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/included_item_news" />
-
-                <include
-                    android:id="@+id/included_item_news3"
-                    layout="@layout/item_news"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/included_item_news2" />
-
-                <include
-                    android:id="@+id/included_item_news4"
-                    layout="@layout/item_news"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/included_item_news3" />
-
-                <include
-                    android:id="@+id/included_item_news5"
-                    layout="@layout/item_news"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/included_item_news4" />
-
-                <include
-                    android:id="@+id/included_item_news6"
-                    layout="@layout/item_news"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/included_item_news5" />
+                    app:layout_constraintTop_toBottomOf="@+id/horizontal_sv" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

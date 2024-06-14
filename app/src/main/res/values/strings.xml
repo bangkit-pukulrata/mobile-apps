@@ -12,8 +12,15 @@
     <string name="Username">Username</string>
     <string name="email_error">".com"</string>
     <string name="password_error">Password must be more than 8 characters</string>
-
+    <string name="default_web_client_id">1024262919795-lbhjovkdvurb2rf6us5rk6r2nvbqglhs.apps.googleusercontent.com</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string-array name="Languages">
+        <item>Tribun</item>
+        <item>Detik</item>
+        <item>Kompas</item>
+        <item>CNN</item>
+        <item>Suara</item>
+    </string-array>
 </resources>

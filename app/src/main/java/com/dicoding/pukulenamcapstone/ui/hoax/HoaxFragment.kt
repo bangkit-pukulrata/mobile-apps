@@ -38,13 +38,24 @@ class HoaxFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val btnCheck : Button = view.findViewById(R.id.button)
+        val inputTitle : EditText = view.findViewById(R.id.hoax_title)
         val inputContent : EditText = view.findViewById(R.id.editTextText3)
 
-//        btnCheck.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_hoaxFragment_to_hoaxResultFragment))
 
         btnCheck.setOnClickListener() {
+            if (inputTitle.text.toString() == "") {
+                Toast.makeText(requireContext(), "Judul Tidak Boleh Kosong", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            if (inputContent.text.toString() == "") {
+                Toast.makeText(requireContext(), "Konten Tidak Boleh Kosong", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
 
-            val inputText = inputContent.text.toString()
+            val inputText = inputTitle.text.toString().replace("\\s+".toRegex(), " ") + inputContent.text.toString().replace("\\s+".toRegex(), " ")
+
+            Log.d("HoaxDetection", "Input Text: $inputText")
+
             val inputTextList = listOf(inputText)
 
             if (inputText.isEmpty()) {
@@ -53,9 +64,9 @@ class HoaxFragment : Fragment() {
             }
 
             Log.d("HomeFragment", "Button Clicked")
-            tokenizer = readTokenizerFromAssets("tokenizer.json")
+            tokenizer = readTokenizerFromAssets("tokenizer_A3.json")
 
-            val tfliteModel = loadModelFileFromAssets("hoax_detection_lstm_model.tflite")
+            val tfliteModel = loadModelFileFromAssets("hoax_detection_A3.tflite")
             val options = Interpreter.Options()
             options.addDelegate(FlexDelegate())
             interpreter = Interpreter(tfliteModel, options)
@@ -65,8 +76,11 @@ class HoaxFragment : Fragment() {
 
             // Tokenisasi dan padding teks baru
             val newSequences = tokenizer.textsToSequences(inputTextList)
-            val maxLen = 100 // Pastikan panjang maksimum sesuai dengan yang digunakan saat melatih model
+            val maxLen = 100
             val newPadded = padSequences(newSequences, maxLen)
+
+            Log.d("HoaxDetection", "newSequences: ${newSequences.contentDeepToString()}")
+            Log.d("HoaxDetection", "newPadded: ${newPadded.contentDeepToString()}")
 
             // Konversi data input menjadi tipe float32
             val floatArray = convertToFloat32Buffer(newPadded)
@@ -97,6 +111,7 @@ class HoaxFragment : Fragment() {
                 val bundle = Bundle()
                 bundle.putString("predictedLabel", predictedLabel)
                 bundle.putFloat("accuracy", predictions[index])
+                bundle.putString("inputTitle", inputTitle.text.toString())
 
                 // Navigasi ke fragment hasil dengan argumen
                 Navigation.findNavController(it).navigate(R.id.action_hoaxFragment_to_hoaxResultFragment, bundle)
@@ -136,9 +151,10 @@ class HoaxFragment : Fragment() {
     private fun padSequences(sequences: Array<IntArray>, maxLen: Int): Array<IntArray> {
         return sequences.map { seq ->
             if (seq.size >= maxLen) {
-                seq.copyOfRange(0, maxLen)
+                seq.takeLast(maxLen).toIntArray()
             } else {
-                seq + IntArray(maxLen - seq.size)
+                val padding = IntArray(maxLen - seq.size)
+                padding + seq
             }
         }.toTypedArray()
     }
@@ -154,12 +170,43 @@ class HoaxFragment : Fragment() {
         }
 
         fun textsToSequences(texts: List<String>): Array<IntArray> {
-            return texts.map { text ->
-                text.split(" ").mapNotNull { word ->
-                    wordIndex[word]
-                }.toIntArray()
+            val sequences = texts.map { text ->
+                val sequence = mutableListOf<Int>()
+                val logBuilder = StringBuilder()
+
+                text.split(" ").forEach { word ->
+                    // Remove commas, periods, parentheses, and convert to lowercase
+                    var cleanedWord = word.replace("[,().:]".toRegex(), "").lowercase()
+
+                    // Split by hyphens, slashes, and transitions between letters and digits
+                    val subWords = cleanedWord.split("[-/]|(?<=[a-zA-Z])(?=[0-9])|(?<=[0-9])(?=[a-zA-Z])|(?<=[a-zA-Z])(?=[^a-zA-Z])|(?<=[^a-zA-Z])(?=[a-zA-Z])".toRegex()).toMutableList()
+
+                    // Check for 'com' at the end of the word and split it
+                    if (subWords.isNotEmpty() && subWords.last().endsWith("com") && subWords.last() != "com") {
+                        val lastWord = subWords.removeAt(subWords.size - 1)
+                        val beforeCom = lastWord.substring(0, lastWord.length - 3)
+                        subWords.add(beforeCom)
+                        subWords.add("com")
+                    }
+
+                    subWords.forEach { subWord ->
+                        if (subWord.isNotBlank() && subWord.any { it.isLetterOrDigit() }) {
+                            val index = wordIndex[subWord] ?: 1
+                            sequence.add(index)
+                            logBuilder.append("Word: $subWord, Sequence: $index\n")
+                        }
+                    }
+                }
+
+                // Log the accumulated information for the current text
+                Log.d("HoaxDetection", logBuilder.toString())
+
+                sequence.toIntArray()
             }.toTypedArray()
+
+            return sequences
         }
+
 
         // Fungsi untuk mengonversi JSONObject ke Map
         private fun jsonToMap(jsonObject: JSONObject): Map<String, Int> {

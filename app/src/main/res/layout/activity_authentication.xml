@@ -80,7 +80,7 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="-20dp"
+        android:layout_marginStart="32dp"
         android:fontFamily="@font/gilroy_medium"
         android:text="@string/Daftar"
         android:textColor="#3C8FE5"
@@ -95,12 +95,14 @@
         android:id="@+id/button_login"
         android:layout_width="291dp"
         android:layout_height="51dp"
-        android:background="@drawable/button_background"
-        android:fontFamily="@font/gilroy_medium"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/primary_orange"
+        android:fontFamily="@font/gilroy_bold"
         android:text="Masuk"
-        android:textColor="@android:color/white"
         android:textSize="16sp"
-        android:textStyle="bold"
+        app:cornerRadius="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/login_password"
         app:layout_constraintHorizontal_bias="0.454"
@@ -185,6 +187,7 @@
         app:layout_constraintVertical_bias="0.654" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -198,7 +201,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="31dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="-20dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -226,18 +229,33 @@
 
         <Button
             android:id="@+id/button_google"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="291dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/google_button_background"
-            android:drawableStart="@drawable/ic_google"
-            android:drawablePadding="8dp"
-            android:gravity="center_vertical"
-            android:paddingStart="16dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/ic_google"
+            android:fontFamily="@font/gilroy_bold"
+            android:paddingLeft="10dp"
             android:text="Lanjutkan dengan Google"
             android:textColor="@color/black"
-            android:backgroundTint="@color/white"
-            android:textSize="16sp" />
+            android:textSize="13sp"
+            app:cornerRadius="35dp" />
+
     </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="47dp"
+        android:layout_height="58dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
